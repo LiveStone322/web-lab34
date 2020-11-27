@@ -1,0 +1,37 @@
+{{>header}}
+{{#if authed}}
+    <div class="form row">
+        <div class="col s10 m8" style="margin-bottom: 0">
+            <div class="input-field">
+                <input id="todo__title" type="text" class="validate" required>
+                <label for="todo__title">Заголовок</label>
+            </div>
+            <div class="input-field">
+                <textarea id="todo__text" class="materialize-textarea"></textarea>
+                <label for="todo__text">Текст</label>
+            </div>
+            <a disabled id="todo__btn" class="waves-effect waves-light btn">Добавить в список</a>
+        </div>
+    </div>
+    {{#each todo}}
+    <div class="form row">
+        <div class="z-depth-3 white col s10 m8" style="margin-bottom: 0">
+            <a class="waves-effect waves-light green btn">Выполнить</a>
+            {{this.title}}
+            <hr/>
+            <div class="input-field">
+                <input id="todo__comment{{this.id}}" type="text" class="validate" required>
+                <label for="todo__comment{{this.id}}">Комментарий</label>
+            </div>
+            <a class="waves-effect waves-light btn">Добавить комментарий</a>
+        </div>
+    </div>
+    {{/each}}
+{{else}}
+    <div class="form row">
+        <div class="z-depth-3 white col s8 m6">
+            Пожалуйста, войдите
+        </div>
+    </div>
+{{/if}}
+{{>footer}}

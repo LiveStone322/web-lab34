@@ -1,0 +1,15 @@
+<nav class="light-blue darken-1">
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo">/// TODO:</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li {{#if home}} class="active" {{/if}}><a href="home">Главная</a></li>
+        {{#if authed}}
+          <li><a href="signout">Выйти</a></li>
+        {{else}}
+          <li {{#if login}} class="active" {{/if}}><a href="login">Войти</a></li>
+          <li {{#if registration}} class="active" {{/if}}><a href="reg">Регистрация</a></li>
+        {{/if}}
+      </ul>
+    </div>
+    
+  </nav>

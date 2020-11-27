@@ -1,0 +1,9 @@
+.error-message {
+    float: left;
+    font-size: 0.9rem;
+    margin-top: -5px;
+    color: #f44336;
+}
+.input-field {
+    margin-bottom: 22px;;
+}

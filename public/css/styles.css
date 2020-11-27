@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;;
+}
+
+.form > div{
+    float: none !important;
+    margin: 25px auto;
+    padding: 25px !important;
+    border-radius: 5px;
+}
